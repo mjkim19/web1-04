@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+    }
+
+    #contents {
+      width: 1280px;
+      height: 720px;
+      display: flex;
+      background-color: rgb(50, 50, 50);
+    }
+
+    #contents>.titleBox {
+      width: 280px;
+      border-right: 2px solid lightgray;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contents>.titleBox>.title-up-box {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #contents>.titleBox>.title-up-box>div {
+      font: italic bold 30pt/50px "Times New Roman";
+      color: lightgray;
+    }
+
+    #contents>.titleBox>.title-down-box {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+
+    #contents>.titleBox>.title-down-box>div {
+      font: normal 10pt/16pt "Verdana";
+      color: lightgray;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #contents>.contentsBox {
+      display: flex;
+      width: 1000px;
+      flex-direction: column;
+    }
+
+    #contents>.contentsBox>.navBox {
+      height: 120px;
+      border-bottom: 2px solid lightgray;
+      position: relative;
+    }
+
+    #contents>.contentsBox>.navBox>.icon {
+      width: 30px;
+      height: 30px;
+      background-size: 30px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      background-image: url('web104-resource/images/mail.png');
+    }
+
+    #contents>.contentsBox>.sectionBox {
+      height: 600px;
+      display: flex;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container {
+      position: relative;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container>.articleBox {
+      height: 100%;
+      padding: 70px 40px;
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container>.articleBox>.text {
+      color: lightgray;
+      z-index: 1;
+      position: relative;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container>.articleBox>.text>.number {
+      display: inline-block;
+      font-size: 30px;
+      font-weight: 700;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid lightgray;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container>.articleBox>.text>.title {
+      font-weight: 700;
+      margin: 20px 0;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container>.articleBox>img {
+      width: 100%;
+      height: auto;
+      z-index: 1;
+      position: relative;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container>.back {
+      position: absolute;
+      width: 0px;
+      height: 100%;
+      z-index: 0;
+      background-image: url('./web104-resource/images/back.png');
+    }
+
+    #contents>.contentsBox>.sectionBox>.container:hover .back {
+      width: 250px;
+      height: 600px;
+      transition-duration: 0.5s;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container:hover .articleBox>img {
+      transform-origin: left bottom;
+      transform: scale(1.2, 1.2);
+      transition-duration: 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="contents">
+    <div class="titleBox">
+      <div class="title-up-box">
+        <div>FORTNITE</div>
+      </div>
+      <div class="title-down-box">
+        <div>@2023, Epic Games, Inc.<br>All Rights Reserved.</div>
+      </div>
+    </div>
+    <div class="contentsBox">
+      <div class="navBox">
+        <div class="icon"></div>
+      </div>
+      <div class="sectionBox">
+        <div class="container">
+          <div class="back"></div>
+          <div class="articleBox">
+            <div class="text">
+              <div class="number">01<nbsp>
+              </div>
+              <div class="title">BATTLE ROYAL</div>
+              <div class="detail">The battle is building! Drop into the Battle Royale. Loot, build, explore, and fight
+                in a game
+                of
+                100 players competing to be the last one standing.</div>
+            </div>
+            <img src="web104-resource/images/img1.png">
+          </div>
+        </div>
+        <div class="container">
+          <div class="back"></div>
+          <div class="articleBox">
+            <div class="text">
+              <div class="number">02</div>
+              <div class="title">ZERO BUILD</div>
+              <div class="detail">All battle, no building! Zero build is all the action, loot, and progression of
+                classic Battle
+                Royale, without the Building!</div>
+            </div>
+            <img src="web104-resource/images/img2.png">
+          </div>
+        </div>
+        <div class="container">
+          <div class="back"></div>
+          <div class="articleBox">
+            <div class="text">
+              <div class="number">03</div>
+              <div class="title">ARENA MODES</div>
+              <div class="detail">Test your skills against the best! During each match, you'll earn Hype by either
+                achieving high
+                placements or eliminating opponents.</div>
+            </div>
+            <img src="web104-resource/images/img3.png">
+          </div>
+        </div>
+        <div class="container">
+          <div class="back"></div>
+          <div class="articleBox">
+            <div class="text">
+              <div class="number">04</div>
+              <div class="title">ARENA MODES</div>
+              <div class="detail">Test your skills against the best! During each match, you'll earn Hype by either
+                achieving high
+                placements or eliminating opponents.</div>
+            </div>
+            <img src="web104-resource/images/img4.png">
+          </div>
+        </div>
+      </div>
+    </div>
+    </main>
+</body>
+
+</html>

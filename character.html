@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .background {
+      width: 100%;
+      height: 1000px;
+      background-image: url('./web104-resource/images/bg.png');
+      display: flex;
+      justify-content: center;
+    }
+
+    .background>.container {
+      margin-top: 150px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .background>.container>.row {
+      display: flex;
+      justify-content: center;
+    }
+
+    .background>.container>.row>.character {
+      width: 100px;
+      height: 120px;
+      transform: skewX(-10deg);
+      background: gray;
+      overflow: hidden;
+      display: flex;
+      margin: 5px;
+      border: 4px solid white;
+      border-radius: 10px;
+    }
+
+    .background>.container>.row>.character>img {
+      transform: skewX(10deg) translateX(-15px);
+    }
+
+    .background>.container>.row>.character:hover {
+      transform: skewX(-10deg) scale(1.2, 1.2);
+      transition-duration: 0.2s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background">
+    <div class="container">
+      <div class="row">
+        <div class="character"><img src="./web104-resource/images/hero01.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero02.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero03.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero04.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero05.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero06.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero07.png"></div>
+      </div>
+      <div class="row">
+        <div class="character"><img src="./web104-resource/images/hero08.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero09.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero10.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero11.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero12.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero13.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero14.png"></div>
+      </div>
+      <div class="row">
+        <div class="character"><img src="./web104-resource/images/hero15.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero16.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero17.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero18.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero19.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero20.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero21.png"></div>
+      </div>
+      <div class="row">
+        <div class="character"><img src="./web104-resource/images/hero22.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero23.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero24.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero25.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero26.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero27.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero28.png"></div>
+      </div>
+      <div class="row">
+        <div class="character"><img src="./web104-resource/images/hero29.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero30.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero31.png"></div>
+        <div class="character"><img src="./web104-resource/images/hero32.png"></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
