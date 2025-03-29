@@ -101,6 +101,8 @@
       color: lightgray;
       z-index: 1;
       position: relative;
+      opacity: 0.5;
+      transition: color 0.5s ease, opacity 0.5s ease; 
     }
 
     #contents>.contentsBox>.sectionBox>.container>.articleBox>.text>.number {
@@ -124,7 +126,7 @@
       position: relative;
     }
 
-    #contents>.contentsBox>.sectionBox>.container>.back {
+    /* #contents>.contentsBox>.sectionBox>.container>.back {
       position: absolute;
       width: 0px;
       height: 100%;
@@ -136,6 +138,28 @@
       width: 250px;
       height: 600px;
       transition-duration: 0.5s;
+    } */
+
+    #contents>.contentsBox>.sectionBox>.container::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 0px;
+      height: 600px;
+      background-image: url('./web104-resource/images/back.png');
+    }
+
+    #contents>.contentsBox>.sectionBox>.container:hover::after {
+      width: 250px;
+      transition-duration: 0.5s;
+    }
+
+    #contents>.contentsBox>.sectionBox>.container:hover .articleBox>.text {
+      color: white;
+      opacity: 1;
     }
 
     #contents>.contentsBox>.sectionBox>.container:hover .articleBox>img {
@@ -165,8 +189,7 @@
           <div class="back"></div>
           <div class="articleBox">
             <div class="text">
-              <div class="number">01<nbsp>
-              </div>
+              <div class="number">01</div>
               <div class="title">BATTLE ROYAL</div>
               <div class="detail">The battle is building! Drop into the Battle Royale. Loot, build, explore, and fight
                 in a game
