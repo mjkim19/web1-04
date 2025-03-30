@@ -97,12 +97,21 @@
       justify-content: space-between;
     }
 
+    #contents>.contentsBox>.sectionBox>.container:nth-child(1)>.articleBox>a:hover {
+      cursor: pointer;
+    }
+
     #contents>.contentsBox>.sectionBox>.container>.articleBox>.text {
       color: lightgray;
       z-index: 1;
       position: relative;
       opacity: 0.5;
       transition: color 0.5s ease, opacity 0.5s ease; 
+    }
+
+    #contents>.contentsBox>.sectionBox>.container:hover .articleBox>.text {
+      color: white;
+      opacity: 1;
     }
 
     #contents>.contentsBox>.sectionBox>.container>.articleBox>.text>.number {
@@ -119,54 +128,33 @@
       margin: 20px 0;
     }
 
-    #contents>.contentsBox>.sectionBox>.container>.articleBox>img {
+    #contents>.contentsBox>.sectionBox>.container>.articleBox img {
       width: 100%;
       height: auto;
-      z-index: 1;
+      z-index: 1; 
       position: relative;
+      transform-origin: left bottom;
+      transition: transform 0.5s ease;
     }
 
-    /* #contents>.contentsBox>.sectionBox>.container>.back {
-      position: absolute;
-      width: 0px;
-      height: 100%;
-      z-index: 0;
-      background-image: url('./web104-resource/images/back.png');
+    #contents>.contentsBox>.sectionBox>.container:hover .articleBox img {
+      transform: scale(1.2, 1.2);
     }
 
-    #contents>.contentsBox>.sectionBox>.container:hover .back {
-      width: 250px;
-      height: 600px;
-      transition-duration: 0.5s;
-    } */
-
-    #contents>.contentsBox>.sectionBox>.container::after {
+    #contents>.contentsBox>.sectionBox>.container::before {
       content: "";
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
       z-index: 0;
       width: 0px;
       height: 600px;
       background-image: url('./web104-resource/images/back.png');
     }
 
-    #contents>.contentsBox>.sectionBox>.container:hover::after {
+    #contents>.contentsBox>.sectionBox>.container:hover::before {
       width: 250px;
       transition-duration: 0.5s;
-    }
-
-    #contents>.contentsBox>.sectionBox>.container:hover .articleBox>.text {
-      color: white;
-      opacity: 1;
-    }
-
-    #contents>.contentsBox>.sectionBox>.container:hover .articleBox>img {
-      transform-origin: left bottom;
-      transform: scale(1.2, 1.2);
-      transition-duration: 0.5s;
-    }
+    } 
   </style>
 </head>
 
@@ -196,7 +184,7 @@
                 of
                 100 players competing to be the last one standing.</div>
             </div>
-            <img src="web104-resource/images/img1.png">
+            <a href="./character.html"><img src="web104-resource/images/img1.png"></a></img>
           </div>
         </div>
         <div class="container">
